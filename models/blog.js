@@ -9,3 +9,5 @@ var blogSchema = new mongoose.Schema ({
     //Relationships
     // userId: {type: ObjectID, ref: "User"}
 })
+
+module.exports = mongoose.model("Blog", blogSchema)
