@@ -9,6 +9,7 @@ server.use(cors());
 var port = 3000;
 
 server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({extended: true}))
 
 var blogRouter = require('./routes/blog-routes');
 server.use('/api/blogs', blogRouter);

@@ -6,8 +6,8 @@ var Blogs = require('../models/blog')
 // get requests
 router.post('/', (req, res, next) => {
     Blogs.create(req.body)
-        .then(() => {
-            res.send({ message: "Article Successfully Posted" })
+        .then((blog) => {
+            res.send(blog)
         })
         .catch(next);
 })
