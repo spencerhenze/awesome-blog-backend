@@ -10,3 +10,4 @@ server.use(cors());
 server.use(bodyParser.json());
 
 var blogRouter = require('./routes/blog-routes');
+server.use('/api/blogs', blogRouter);
